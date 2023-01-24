@@ -52,7 +52,7 @@ app.post("/", checkAuth, routeCreateValidation, RouteController.create);
 app.delete("/route/:id", checkAuth, RouteController.remove);
 app.patch("/route/:id", checkAuth, RouteController.update);
 
-app.listen(3000, (err) => {
+app.listen(process.env.PORT || 3000, (err) => {
   if (err) {
     return console.log(err);
   }
