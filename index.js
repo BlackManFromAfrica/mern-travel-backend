@@ -15,7 +15,7 @@ import cors from "cors";
 
 mongoose
   .connect(
-    "mongodb+srv://admin:admin@cluster0.jlp70m9.mongodb.net/mytrip?retryWrites=true&w=majority"
+    process.env.MONGODB_URI
   )
   .then(() => console.log("DB Ok"))
   .catch((err) => console.log("db error", err));
