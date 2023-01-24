@@ -15,7 +15,7 @@ import cors from "cors";
 
 mongoose
   .connect(
-    process.env.MONGODB_URI
+    process.env.MONGODB_URI,{ useNewUrlParser: true }
   )
   .then(() => console.log("DB Ok"))
   .catch((err) => console.log("db error", err));
